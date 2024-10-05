@@ -1,0 +1,37 @@
+.CopyText {
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 4px 5px 4px 4px #94c8e9;
+  cursor: pointer;
+  &:active {
+    background-color: #2fff8f7a;
+    .CopyText__Content__Box__Title{
+      width: 2em;
+      height: 2em;
+    }
+  }
+  &__Heading {
+    margin-left: 1em;
+  }
+  &__Content {
+    &__Box {
+      display: flex;
+      justify-content: space-between;
+      &__Copied {
+        color: green;
+      }
+      &__Title {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
+
+  &__Code {
+    white-space: pre;
+    font-family: monospace;
+    overflow-x: auto;
+  }
+}

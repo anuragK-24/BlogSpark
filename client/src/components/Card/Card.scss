@@ -1,0 +1,106 @@
+.Card{
+    border: 1px solid black;
+    border-radius: 1em;
+    margin: 2%;
+    padding-top: 4%;
+    width: 16em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+    transition: ease-in-out 0.3s;
+    &.Blog{
+        display: flex;
+        flex-direction:column;
+        margin: 3% 6% 6% 6% ;
+        box-shadow: -1px 1px 28px 8px #94c8e9;
+        border-radius: 1em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 25%;
+        &__Card{
+            border-radius: 10% ;
+            margin: 4%;
+            height: 100%;
+            width: 52%;
+            box-shadow: 0.2em  0.2em 0.2em 0.2em  #91acc4;
+            &__Image{
+            height: 6em;
+            width: 9em;
+            padding: 6%;
+            }
+            &__Label{
+                margin: 8%;
+                font-weight: 600;
+                font-size: 1.2em;
+            }
+        }
+    }    
+    &.Skill{
+        width: 8em;
+        height: 8em;
+        margin: 1.5em;
+        .Card__Photo{
+            width: 4em;
+        }
+    }
+    &.Project{
+        margin: 1.5em;
+        .Card__Photo{
+            height: 8em;
+            width: 9em;
+        }
+    }
+    &.Connect{
+        width: 7em;
+        height: 8em;
+        margin: 1.5em;
+        border-radius: 1.8em;
+        .Card__Photo{
+            width: 3.5em;
+        }
+
+    }
+
+
+    &:hover{
+        box-shadow: -1px 1px 28px 8px #94c8e9;
+        transform: translateY(-10px);
+        border: none;
+    }
+    &__Description{
+        text-align: center;
+        font-size: 0.8em;
+        padding: 6%;
+    }
+    &__Name{
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    &__Photo{
+        height: 7em;
+        width: 7em;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Card{
+        width: 18em;
+        height: 21em;
+        &.Skill{
+            height: 7em;
+            width: 7em;
+            margin: 0.7em;
+        }
+        &.Connect{
+            width: 6em;
+            margin: 0.5em;
+        }
+        &.Blog{
+            height: 12em;
+            width: 12em;
+        }
+    }
+}

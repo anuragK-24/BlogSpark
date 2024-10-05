@@ -1,0 +1,121 @@
+.singlePost {
+  flex: 9;
+  width: -webkit-fill-available;
+}
+pre {
+  overflow-x: auto;
+  background-color: black;
+  color: white;
+  padding: 13px;
+  font-family: unset;
+  border-radius: 16px;
+}
+.singlePostDesc img {
+  width: -webkit-fill-available;
+  border-radius: 16px;
+  border: 1px solid #d3d3d3;
+  margin: 3em;
+}
+
+
+.singlePostWrapper {
+  overflow-x: hidden; 
+  padding: 0px 3em 3em;
+  display: flex;
+  flex-direction: column;
+}
+.singlePostImg {
+  max-height: 15em;
+  object-fit: scale-down;
+  border-radius: 5px;
+}
+.singlePostTitle {
+  border-top: 2px solid #d3d3d3;
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+}
+
+.singlePostTitleInput {
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.singlePostEdit {
+  float: right; /* to move the edit and delete button in  */
+  font-size: 15px;
+}
+.singlePostIcon {
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+  color: rgba(29, 148, 208, 0.733);
+}
+
+.singlePostIcon:last-child {
+  color: tomato;
+}
+
+.singlePostInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #b39656;
+}
+
+.singlePostDesc {
+  color: rgba(22, 21, 21, 0.705);
+  font-size: 20px;
+  line-height: 28px;
+
+  white-space: pre-line;
+}
+
+.singlePostDesc::first-letter {
+  margin-left: 30px;
+  font-size: 30px;
+  min-width: 600px;
+  font-weight: 600;
+}
+
+.singlePostDescInput {
+  border: none;
+}
+
+.singlePostDesc a {
+  color: blue;
+}
+.singlePostDescInput:focus {
+  outline: none;
+}
+
+.singlePostButton {
+  background-color: green;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .singlePostWrapper {
+    padding: 1em 1em 6em 1em;
+  }
+  .singlePostDesc{
+    font-size: 14px;
+  }
+}

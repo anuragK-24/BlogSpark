@@ -1,0 +1,127 @@
+.error-message{
+  text-align: center;
+    color: red;
+    font-size: 1.4em;
+    margin-top: 16px;
+    font-weight: 700;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 240px;
+  margin-top: -40px;
+  &__loading {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+
+    &__icon {
+      display: block;
+      height: 17em;
+      width: 23em;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      text-align: center;
+      margin-top: 2em;
+    }
+  }
+
+  &__content {
+    &__searchItems {
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      // border:2px 2px 2px 0px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      max-width: 25em;
+      margin: auto;
+      div{
+        border-bottom: 1px solid black;
+      }
+      li {
+        display: initial;
+        width: -webkit-fill-available;
+        padding: 0.5em;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        
+        &:first-child {
+          border-bottom: none;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+      
+    }
+    &__search {
+      margin: auto;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 1em;
+      max-width: 25em;
+      height: 3em;
+
+      &__input {
+        width: inherit;
+        border-radius: 10px;
+        border: none;
+        height: 2.8em;
+        flex: 7;
+
+        &:focus {
+          outline: none;
+          background-color: antiquewhite;
+        }
+      }
+      a{
+        flex: 1;
+      }
+    }
+  }
+}
+.greeting{
+  text-align: center;
+  padding-top: 1em;
+}
+
+.text {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+@media only screen and (max-width: 600px) {
+  .home{
+    margin: 1em;
+    margin-top: -40px;
+  }
+  .home__content__search, .home__content__searchItems {
+    max-width: 15em;
+  }
+  .home__loading {
+    margin-bottom: 8em;
+  }
+  .home__loading__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17em;
+  }
+}

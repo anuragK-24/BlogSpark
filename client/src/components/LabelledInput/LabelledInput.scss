@@ -1,0 +1,61 @@
+/* Chrome, Safari, Edge, Opera */
+.LabelledInput__Input[type="number"]::-webkit-inner-spin-button,
+.LabelledInput__Input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.LabelledInput__Input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.LabelledInput__Input--Error::placeholder {
+    color: red;
+}
+.LabelledInput {
+    background-color: inherit;
+    margin-bottom: 0.5em;
+
+    &__Label {
+        background-color: inherit;
+        font-weight: 600;
+        margin-bottom: 0.2em;
+        font-size: 0.7em;
+        font-family: sans-serif;
+    }
+    
+    &__Error{
+        margin-top:0.2em;
+        font-size: 0.65em;
+        color: red;
+        font-weight: 400;
+    }
+    
+    &__Input {
+        background-color: aliceblue;
+        width: auto;
+        padding: 0.1em;
+        border: 1px solid black;
+        border-radius: 0.2em;
+        font-size: 0.9em;
+        font-weight: 300;
+        &::placeholder {
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid green;
+            background-color: yellowgreen;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .LabelledInput{
+        &__Input {
+            width:53vw;
+        }
+    }
+}

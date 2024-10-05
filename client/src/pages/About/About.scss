@@ -1,0 +1,54 @@
+.About{
+    margin-left: 280px;
+    margin-right: 70px;
+    margin-top: -40px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    &_Heading{
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+    &_Subheading {
+        font-size: 2em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #34495e;
+    }
+
+    &_Text {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      &_Links{
+        a{
+            color: blue;
+            text-decoration: none;
+            font-family: monospace;
+            font-weight: 700;
+        }
+      }
+}
+@media only screen and (max-width: 600px) {
+    .About{
+        margin-top: -4em;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1em;
+        &_Text {
+            font-size: 1em;
+        }
+        &_Subheading {
+            font-size: 1.4em;
+        }
+        &_Heading {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 11px;
+        }
+    }
+}

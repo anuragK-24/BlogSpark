@@ -1,0 +1,96 @@
+.SignUp {
+    margin-bottom: 20px;
+    margin-left: 240px;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &_Content {
+      display: flex;
+      margin: 1em;
+      height: 68vh;
+      box-shadow: 2px 1px 20px 6px grey;
+      width: 59em;
+      align-items: center;
+      border-radius:13px;
+      &_Image {
+        display: flex;
+        flex: 1 1;
+        border-left: 2px solid;
+        justify-content: center;
+        img {
+          height: 17em;
+        }
+      }
+  
+      h1 {
+        font-size: 2.5em;
+        font-weight: 600;
+        margin-bottom: 3.5em;
+        font-family: cursive;
+      }
+      &_FormContainer {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &_error{
+          color: red;
+          font-size: 0.7em;
+          font-weight: 600;
+          max-width: 16em;
+        }
+        &_Form {
+          font-size: 1.4em;
+          padding: 1em;
+          border-radius: 1em;
+          background: #fbb73b;
+          max-height: 15em;
+          &_Button {
+            border-radius: 0.3em;
+            font-size: 0.7em;
+            background-color: #2f2e41;
+            color: white;
+            margin: auto;
+            display: flex;
+            cursor: pointer;
+            margin-top: 0.7em;
+            &:active {
+              transform: scale(0.9);
+            }
+          }
+          button:disabled {
+            cursor: not-allowed;
+            background-color: rgb(243, 193, 175);
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .SignUp{
+      margin-left: 0;
+      &_Heading{
+        margin: 0.5em;
+      }
+      &_Content{
+        height: 51vh;
+        width: auto;
+        &_Image{
+          display: none;
+        }
+        &_FormContainer{
+          width: 75vw;
+          &_Form{
+            margin: 0px 14px 0px 14px;
+            width: 75vw;
+          height: 75vw;
+          }
+        }
+      }
+    }
+  }
+  

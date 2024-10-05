@@ -1,0 +1,24 @@
+.MarkDown{
+    margin-left: 240px;
+    margin-top: -80px;
+    padding: 3em;
+    &__Heading{
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+    }
+    &__Desc{
+        color: #b39656;
+        font-weight: 600;
+        font-size: 1.5em;
+        margin: 1em;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .MarkDown{
+        margin-top: -40px;
+        padding: 0em;
+        margin: 0;
+    }
+}

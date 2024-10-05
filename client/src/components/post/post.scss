@@ -1,0 +1,146 @@
+.latestLabel {
+  transform: rotate(-16deg);
+  transform-origin: left;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: cornflowerblue;
+  margin-left: 2em;
+}
+.firstPost {
+  animation: glowingBorder 3s infinite alternate; /* Animation for glowing border effect */
+
+  /* Latest label style */
+  .latestLabel {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes glowingBorder {
+  0% {
+    border-color: #db3498;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+  }
+  50% {
+    border-color: #1abc9c;
+    box-shadow: 0 0 15px rgba(26, 188, 156, 0.7);
+  }
+  100% {
+    border-color: #db3498;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+  }
+}
+.post {
+  border: 1px solid #e0e0e0;
+  width: 50em;
+  margin: 0px 20px 40px 25px;
+  padding: 1em;
+  display: flex;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &_Content {
+    flex: 3;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 0;
+    &_Author {
+      color: brown;
+      font-weight: 600;
+    }
+    &_Title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0.5em;
+    }
+    &_Info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1em;
+      &_Date {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-style: italic;
+        color: #777;
+        margin-top: 0.3em;
+      }
+    }
+    &_Desc {
+      font-family: "Merriweather", serif;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &_Img {
+    flex: 1;
+    width: 14em;
+    height: 11em;
+    object-fit: cover;
+    border-radius: 10px;
+    align-self: center;
+    border: black 1px solid;
+    border-radius: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .post {
+    width: 20em;
+    height: 10em;
+    &_Img {
+      width: 5em;
+      height: 4em;
+    }
+
+    &_Content {
+      &_Author {
+        font-size: 0.8em;
+      }
+
+      &_Title {
+        font-size: 1.2em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      &_Info {
+        margin: 0;
+        &_Date {
+          font-size: 11px;
+        }
+      }
+      &_Desc {
+        font-size: 11px;
+        line-height: 1.2em;
+      }
+    }
+  }
+}
