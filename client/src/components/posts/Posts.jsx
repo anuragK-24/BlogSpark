@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./posts.css";
 import Post from "../post/Post";
 import axios from "axios";
@@ -11,10 +11,12 @@ export default function Posts() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
+  const apiUrl = (import.meta.env.VITE_API_URL);
+  
   const fetchPosts = async (page) => {
     try {
       const res = await axios.get(
-        `https://blog-backend-zeta.vercel.app/api/posts?page=${page}&limit=3`
+        `${apiUrl}/api/posts?page=${page}&limit=3`
       );
       setPosts((prevPosts) => {
         const newPosts = res.data.posts.filter(

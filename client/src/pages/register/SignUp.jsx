@@ -11,7 +11,7 @@ export default function SignUp() {
   const [password, setPassword] = useState(""); // Initialize password state with an empty string
   const [errorEmail, setErrorEmail] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const apiUrl = (import.meta.env.VITE_API_URL);
   function isValidEmail(email) {
     const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
     return regex.test(email);
@@ -69,17 +69,24 @@ export default function SignUp() {
     }
     try {
       const res = await axios.post(
-        "https://blog-backend-zeta.vercel.app/api/auth/register",
+        `${apiUrl}/api/auth/register`,
         {
           username,
           email,
           password,
         }
       );
-      res.data && navigate("/login");
-    } catch (errorEmail) {
+      
+      // Check if the response data is valid before navigating
+      if (res.data) {
+        navigate("/login");
+      }
+    } catch (error) {
+      // Handle specific error if needed
+      console.error("Registration error:", error);
       setErrorEmail(true);
     }
+    
   };
   return (
     <div className="SignUp">

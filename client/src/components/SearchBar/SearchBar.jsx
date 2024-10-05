@@ -11,10 +11,11 @@ export default function SearchBar() {
   const searchItemsRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
   const [error, setError] = useState("");
+  const apiUrl = (import.meta.env.VITE_API_URL);
   const fetchPosts = async (searchQuery) => {
     try {
       const res = await axios.get(
-        `https://blog-backend-zeta.vercel.app/api/posts/search/${searchQuery}`
+        `${apiUrl}/api/posts/search/${searchQuery}`
       );
       setSearchPost(res.data);
       setError("");

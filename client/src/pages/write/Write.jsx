@@ -12,7 +12,7 @@ export default function Write() {
     "https://revenuearchitects.com/wp-content/uploads/2017/02/Blog_pic-450x255.png"
   );
   const { user } = useContext(Context);
-
+  const apiUrl = (import.meta.env.VITE_API_URL);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {
@@ -23,7 +23,7 @@ export default function Write() {
     };
     try {
       const res = await axios.post(
-        "https://blog-backend-zeta.vercel.app/api/posts",
+        `${apiUrl}/api/posts`,
         newPost
       );
       window.location.replace("/post/" + res.data._id);

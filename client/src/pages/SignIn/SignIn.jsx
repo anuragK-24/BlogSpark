@@ -11,7 +11,7 @@ export default function SignIn() {
   const [passWord, setPassword] = useState("");
 
   const { dispatch, isFetching } = useContext(Context);
-
+  const apiUrl = (import.meta.env.VITE_API_URL);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const username = userName.toLowerCase();
@@ -19,7 +19,7 @@ export default function SignIn() {
 
     try {
       const res = await axios.post(
-        "https://blog-backend-zeta.vercel.app/api/auth/login",
+        `${apiUrl}/api/auth/login`,
         {
           username,
           password,
